@@ -1,0 +1,31 @@
+#logo-break-container {
+    .logo-break {
+        margin: 1.25rem 0 1.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-break-icon {
+        color: #2c3e50 !important;
+        font-size: 2rem;
+    }
+
+	.logo-break-line {
+        width: 100%;
+        max-width: 15rem;
+        height: 0.25rem;
+        background-color: black;
+        border-radius: 1rem;
+        border-color: black !important;
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+    }
+}

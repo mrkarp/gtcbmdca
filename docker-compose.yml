@@ -1,0 +1,38 @@
+version: "3.7"
+services:
+   wordpress:
+       image: wordpress:php7.3-apache
+       container_name: ${WORDPRESS_CONTAINER_NAME}
+       depends_on:
+           - mysql
+       ports:
+           - 8000:80
+       working_dir: ${WORDPRESS_DIRECTORY}
+       environment:
+           TZ: ${TZ}
+           WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+           WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+           WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+       volumes:
+           - type: bind
+             source: .\
+             target: ${WORDPRESS_DIRECTORY}
+   mysql:
+       image: mysql:5.7
+       container_name: ${MYSQL_CONTAINER_NAME}
+       ports:
+         - "3306:3306"
+       environment:
+           TZ: ${TZ}
+           MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+           MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
+           MYSQL_USER: ${WORDPRESS_DB_USER}
+           MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+       volumes:
+           - database:/var/lib/mysql
+           - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+           - type: bind
+             source: .\root
+             target: /root
+volumes:
+   database:

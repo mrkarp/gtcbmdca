@@ -1,0 +1,27 @@
+/*!
+    Theme Name: Twin Cities Bernaise Mountain Dew Dog
+    Theme URI: https://wordpress.org/themes/twentynineteen/
+    Author: ZK
+    Description: 
+    Requires at least: WordPress 4.9.6
+    Version: 1.4
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain: bmd
+*/
+
+@import 'base/variables';
+@import 'vendors/bootstrap';
+@import 'vendors/fontawesome';
+@import 'base/utility';
+@import 'vendors/animate';
+@import 'parts/membership-benefits';
+@import 'parts/about-the-club';
+@import 'parts/about-the-breed';
+@import 'parts/events';
+@import 'parts/hero';
+@import 'parts/logo-break';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'pages/home';
+@import 'pages/faq';

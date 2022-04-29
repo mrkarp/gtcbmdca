@@ -1,0 +1,37 @@
+.faq-container {
+    
+    dt {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem;
+      border: 0.1rem solid gray;
+      color: $black;
+      margin: 1.5rem 0 0 1.5rem;
+      h2 {
+        border-right: 0.1rem solid gray;
+        flex-grow: 1;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 1rem 0 0;
+        padding: 0 1rem 0 0;
+      }
+    }
+    dd {
+      border: 0.1rem solid gray;
+      border-top: none;
+      padding: 1.5rem;
+      margin: 0 0 0 1.5rem;
+    }
+    .collapseomatic div {
+      background-image: url('./images/paw.svg');
+      flex-shrink: 0;
+      height: 16px;
+      width: 16px;
+    }
+    .colomat-close div {
+        transform:rotate(180deg);
+    }
+  }
+  
