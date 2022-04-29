@@ -1,0 +1,30 @@
+
+input {
+    width: 100%;
+}
+
+.p-0 {
+ padding: 0 !important;
+}
+
+.pl-5 {
+    padding-left: .5rem !important;
+}
+
+.ml-1 {
+    margin-left: 1rem !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  } 
